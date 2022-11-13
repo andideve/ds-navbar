@@ -21,13 +21,13 @@ export interface NavbarLinksProps extends SystemProps {
   spacing?: string | number;
 }
 
-export const NavbarLinks = styled('ul', { shouldForwardProp })<NavbarLinksProps>(
+export const NavbarLinks = styled('div', { shouldForwardProp })<NavbarLinksProps>(
   {
     listStyle: 'none',
     display: 'flex',
   },
   ({ spacing = '1.5rem' }) => ({
-    'li:not(:first-of-type)': {
+    '&>:not(:first-of-type)': {
       marginLeft: spacing,
     },
   }),
